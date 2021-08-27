@@ -8,33 +8,37 @@
 import SwiftUI
 
 struct WeeklyView: View {
+    var weekDay: WeekDays
+    var imageSystemName: String
+    var probabilityOfRain: Int // pop
+    var minTemp: Int
+    var maxTemp: Int
+    
     var body: some View {
-        List(0..<20) { _ in
-           HStack {
-                Text("Saturday")
-                Spacer()
-                HStack {
-                    Image(systemName: "cloud.rain.fill")
-                        .renderingMode(.original)
-                    Text("70 %")
-                        .foregroundColor(.blue)
-                }
-                .padding()
-                Spacer()
-                Text("19")
-                    .padding(.trailing)
-                Text("11")
-                    .foregroundColor(.gray)
-                
+       HStack {
+        Text(weekDay.rawValue.capitalized)
+            Spacer()
+            HStack {
+                Image(systemName: imageSystemName)
+                    .renderingMode(.original)
+                Text("\(probabilityOfRain) %")
+                    .foregroundColor(.blue)
             }
-           .font(.title2)
+            .padding()
+            Spacer()
+            Text(String(maxTemp))
+                .padding(.trailing)
+            Text(String(minTemp))
+                .foregroundColor(.gray)            
         }
+       .padding()
+       .font(.title2)
     }
 }
 
 struct WeeklyView_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklyView()
+        WeeklyView(weekDay: .friday, imageSystemName: "cloud.drizzle.fill", probabilityOfRain: 70, minTemp: 11, maxTemp: 19)
             .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }
