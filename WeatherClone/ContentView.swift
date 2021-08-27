@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            CityView(city: "Berlin", weatherDescription: "Cloudy", tempNow: 13, maxTemp: 17, minTemp: 11)
+                .padding(50)
+            DividerView()
+                
+            Spacer()
+            DailyViewSection()
+                .padding()
+            DividerView()
+            WeeklyViewSection()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }

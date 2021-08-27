@@ -31,8 +31,10 @@ struct WeeklyView: View {
             Text(String(minTemp))
                 .foregroundColor(.gray)            
         }
-       .padding()
-       .font(.title2)
+       .frame(width: .infinity, height: 50)
+       .padding(.leading)
+       .padding(.trailing)
+       .font(.system(size: 18))
     }
 }
 

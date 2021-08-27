@@ -16,14 +16,17 @@ struct CityView: View {
     
     var body: some View {
         VStack {
-            Text(city)
-                .font(.largeTitle)
-            Text(weatherDescription)
-                .font(.title3)
-            Text("\(tempNow)º")
-                .font(.system(size: 90))
-            Text("H:\(maxTemp)º L:\(minTemp)º")
-                .font(.title3)
+            VStack {
+                Text(city)
+                    .font(.largeTitle)
+                Text(weatherDescription)
+                    .font(.title3)
+                Text("\(tempNow)º")
+                    .font(.system(size: 90))
+                    .fontWeight(.light)
+                Text("H:\(maxTemp)º  L:\(minTemp)º")
+                    .font(.title3)
+            }
         }
     }
 }

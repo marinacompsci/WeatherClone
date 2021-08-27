@@ -32,9 +32,7 @@ struct MoreInfoView: View {
                 Spacer()
                 
             }
-            .padding()
-            Divider()
-                
+            .padding()                
         }
              
     }

@@ -16,6 +16,9 @@
 		F1413F4D26D862A10054B080 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1413F4C26D862A10054B080 /* WeeklyView.swift */; };
 		F1BC16D126D90BD20086D0D6 /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16D026D90BD20086D0D6 /* MoreInfoView.swift */; };
 		F1BC16D526D90FE80086D0D6 /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16D426D90FE80086D0D6 /* WeekDays.swift */; };
+		F1BC16D926D916BD0086D0D6 /* DailyViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16D826D916BD0086D0D6 /* DailyViewSection.swift */; };
+		F1BC16DC26D917FE0086D0D6 /* WeeklyViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16DB26D917FE0086D0D6 /* WeeklyViewSection.swift */; };
+		F1BC16E026D920740086D0D6 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16DF26D920740086D0D6 /* DividerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F1413F4C26D862A10054B080 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
 		F1BC16D026D90BD20086D0D6 /* MoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
 		F1BC16D426D90FE80086D0D6 /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
+		F1BC16D826D916BD0086D0D6 /* DailyViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewSection.swift; sourceTree = "<group>"; };
+		F1BC16DB26D917FE0086D0D6 /* WeeklyViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewSection.swift; sourceTree = "<group>"; };
+		F1BC16DF26D920740086D0D6 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		F1413F3326D858DB0054B080 /* WeatherClone */ = {
 			isa = PBXGroup;
 			children = (
+				F1BC16DE26D920690086D0D6 /* HelperViews */,
 				F1BC16D326D90FD90086D0D6 /* Enums */,
 				F1413F4426D8598D0054B080 /* Views */,
 				F1413F3426D858DB0054B080 /* WeatherCloneApp.swift */,
@@ -88,6 +95,8 @@
 				F1413F4926D85AA60054B080 /* DailyView.swift */,
 				F1413F4C26D862A10054B080 /* WeeklyView.swift */,
 				F1BC16D026D90BD20086D0D6 /* MoreInfoView.swift */,
+				F1BC16D826D916BD0086D0D6 /* DailyViewSection.swift */,
+				F1BC16DB26D917FE0086D0D6 /* WeeklyViewSection.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +107,14 @@
 				F1BC16D426D90FE80086D0D6 /* WeekDays.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		F1BC16DE26D920690086D0D6 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				F1BC16DF26D920740086D0D6 /* DividerView.swift */,
+			);
+			path = HelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +190,10 @@
 				F1BC16D126D90BD20086D0D6 /* MoreInfoView.swift in Sources */,
 				F1413F3726D858DB0054B080 /* ContentView.swift in Sources */,
 				F1413F4D26D862A10054B080 /* WeeklyView.swift in Sources */,
+				F1BC16E026D920740086D0D6 /* DividerView.swift in Sources */,
+				F1BC16D926D916BD0086D0D6 /* DailyViewSection.swift in Sources */,
 				F1413F4626D859B20054B080 /* CityView.swift in Sources */,
+				F1BC16DC26D917FE0086D0D6 /* WeeklyViewSection.swift in Sources */,
 				F1BC16D526D90FE80086D0D6 /* WeekDays.swift in Sources */,
 				F1413F3526D858DB0054B080 /* WeatherCloneApp.swift in Sources */,
 			);
