@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct DailyViewSection: View {
-    // data goes here
+    var data: [WeatherModel]
+    
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<12) { _  in
-                        DailyView(hour: "12", imageSystemName: "cloud.drizzle.fill", temperature: 13)
+                    ForEach(data) { item in
+                        DailyView(hour: String(item.date.splitApiDate()[1].separateHourFromTime()), imageSystemName: "cloud.drizzle.fill", temperature: item.temp)
                     }
                 }
             }
         }
+        .frame(height: 100)
     }
 }
 
 struct DailyViewSection_Previews: PreviewProvider {
     static var previews: some View {
-        DailyViewSection()
+        DailyViewSection(data: WeatherModel.createModelList(withAmount: 12))
             .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }

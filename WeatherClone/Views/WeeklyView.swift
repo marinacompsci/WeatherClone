@@ -22,7 +22,7 @@ struct WeeklyView: View {
                 Image(systemName: imageSystemName)
                     .renderingMode(.original)
                 Text("\(probabilityOfRain) %")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("customBlue"))
             }
             .padding()
             Spacer()

@@ -8,24 +8,51 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var data: [WeatherModel]
+    @State var isAnimating: Bool
     var body: some View {
-        VStack {
-            CityView(city: "Berlin", weatherDescription: "Cloudy", tempNow: 13, maxTemp: 17, minTemp: 11)
-                .padding(50)
-            DividerView()
-                
-            Spacer()
-            DailyViewSection()
-                .padding()
-            DividerView()
-            WeeklyViewSection()
+        ZStack {
+            VStack {
+                CityView(city: "Berlin", weatherDescription: data[0].description,
+                         tempNow: data[0].temp, maxTemp: data[0].tempMax, minTemp: data[0].tempMin)
+                    .padding(50)
+                DividerView()
+                Spacer()
+                DailyViewSection(data: data)
+                    .padding(.leading)
+                    .padding(.top, -1)
+                    .padding(.bottom, -1)
+                DividerView()
+                WeeklyViewSection(data: data)
+                    .padding(.top, 5)
+                    .padding(.leading, 5)
+                    .padding(.trailing, 5)
+            }
+            LoadingView(isAnimating: isAnimating)
+                .visibility(hidden: !isAnimating)
+
         }
+        .onAppear() {
+            loadData(handler: updateUIWithData)
+        }
+       
     }
+    
+    
+    func updateUIWithData(data: [WeatherModel]?) {
+        guard let data = data else { fatalError("Could not update UI with data")}
+        self.data = data
+        self.isAnimating = false
+    }
+    
+
+
 }
 
 struct ContentView_Previews: PreviewProvider {
+   
     static var previews: some View {
-        ContentView()
+        ContentView(data: WeatherModel.createZeroList(), isAnimating: true)
             .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }
