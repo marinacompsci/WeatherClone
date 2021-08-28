@@ -19,6 +19,7 @@ struct CityView: View {
             VStack {
                 Text(city)
                     .font(.largeTitle)
+                    .padding(.bottom, 5)
                 Text(weatherDescription)
                     .font(.title3)
                 Text("\(tempNow)º")

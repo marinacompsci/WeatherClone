@@ -12,7 +12,7 @@ struct WeatherCloneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(data: WeatherModel.createZeroList(), isAnimating: true)
+            ContentView(data: DataModel.createModelWithZeroedValues(), isAnimating: true)
         }
         
     }

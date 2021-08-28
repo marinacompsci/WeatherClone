@@ -17,10 +17,7 @@ struct LoadingView: View {
             ActivityIndicator(isAnimating: $isAnimating, style: .large)
         }
         .ignoresSafeArea()
-        
     }
-    
-    
 }
 
 extension View {
@@ -54,8 +51,6 @@ struct ActivityIndicator: UIViewRepresentable {
     func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
         isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
     }
-    
-    
 }
 
 struct LoadingView_Previews: PreviewProvider {

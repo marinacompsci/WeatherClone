@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct WeeklyViewSection: View {
-    var data: [WeatherModel]
+    var data: DataModel
     
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            ForEach(data) { item in
-                //Text(item.date)
-                WeeklyView(weekDay: .friday, imageSystemName: "cloud.sun.rain.fill", probabilityOfRain: item.precipitationProbability, minTemp: item.tempMin, maxTemp: item.tempMax)
-                
+            ForEach(data.daily, id: \.self) { item in
+                WeeklyView(iconImage: UIImage(systemName: "thermometer")!, iconString: item.weather[0].icon!, weekDay: Date(timeIntervalSince1970: TimeInterval(item.dt)).getDayOfWeek() , probabilityOfRain: item.pop, minTemp: Int(item.temp.min), maxTemp: Int(item.temp.max))
             }
         }
     }
@@ -24,7 +22,7 @@ struct WeeklyViewSection: View {
 
 struct WeeklyViewSection_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklyViewSection(data: WeatherModel.createModelList(withAmount: 5))
+        WeeklyViewSection(data: DataModel.createFakeDateModel())
             .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }
