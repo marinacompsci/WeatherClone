@@ -12,7 +12,7 @@ struct WeeklyViewSection: View {
     
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        ScrollView(showsIndicators: true) {
             ForEach(data.daily, id: \.self) { item in
                 WeeklyView(iconImage: UIImage(systemName: "thermometer")!, iconString: item.weather[0].icon!, weekDay: Date(timeIntervalSince1970: TimeInterval(item.dt)).getDayOfWeek() , probabilityOfRain: item.pop, minTemp: Int(item.temp.min), maxTemp: Int(item.temp.max))
             }
