@@ -9,7 +9,7 @@ import Foundation
 
 //func loadData() -> [WeatherModel]? {
 func loadData(handler: @escaping ([WeatherModel]?) -> ()) {
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?q=Dubai&appid=4d66106b91d3668aebe2b2b0ec31dc10&units=metric")
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?q=Berlin&appid=4d66106b91d3668aebe2b2b0ec31dc10&units=metric")
     //else { return nil }
     else { return }
     
