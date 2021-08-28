@@ -24,7 +24,8 @@ struct DailyViewSection: View {
                     }
                 }
             }
-        }        
+        }
+        .foregroundColor(.white)
         
     }
     

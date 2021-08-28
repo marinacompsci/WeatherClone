@@ -39,10 +39,11 @@ struct WeeklyView: View {
             Text(String(minTemp))
                 .foregroundColor(Color(red: 38/255, green: 37/255, blue: 37/255))
        }
-       .frame(width: .infinity, height: 50)
+       .frame(maxWidth: .infinity, maxHeight: 50)
        .padding(.leading)
        .padding(.trailing)
        .font(.system(size: 18))
+       .foregroundColor(.white)
        .onAppear {
            loadIcon(iconString: iconString, handler: updateIconImage)
     }

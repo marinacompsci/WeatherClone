@@ -29,6 +29,7 @@ struct CityView: View {
                     .font(.title3)
             }
         }
+        .foregroundColor(.white)
     }
 }
 

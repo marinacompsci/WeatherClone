@@ -28,7 +28,7 @@ struct ContentView: View {
                         .padding(.top, 5)
                         .padding(.leading, 5)
                         .padding(.trailing, 5)
-                    MoreInfoViewSection(sunrise: data!.current.sunrise, sunset: data!.current.sunset, humidity: data!.current.humidity, pressure: data!.current.pressure, feelsLike: Int(data!.current.feels_like), windSpeed: data!.current.wind_speed, visibility: data!.current.visibility, uvi: data!.current.uvi)                   
+                    MoreInfoViewSection(description: data!.current.weather[0].description.capitalized, temp: Int(data!.current.temp), sunrise: data!.current.sunrise, sunset: data!.current.sunset, humidity: data!.current.humidity, pressure: data!.current.pressure, feelsLike: Int(data!.current.feels_like), windSpeed: data!.current.wind_speed, visibility: data!.current.visibility, uvi: data!.current.uvi)
                 }
                 
             }
