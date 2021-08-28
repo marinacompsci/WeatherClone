@@ -18,6 +18,7 @@
 		F1413F4A26D85AA60054B080 /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1413F4926D85AA60054B080 /* DailyView.swift */; };
 		F1413F4D26D862A10054B080 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1413F4C26D862A10054B080 /* WeeklyView.swift */; };
 		F14E058526DA56690017CC15 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E058426DA56690017CC15 /* BackgroundView.swift */; };
+		F14E058926DAC2B90017CC15 /* MoreInfoViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E058826DAC2B80017CC15 /* MoreInfoViewSection.swift */; };
 		F1BC16D126D90BD20086D0D6 /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16D026D90BD20086D0D6 /* MoreInfoView.swift */; };
 		F1BC16D926D916BD0086D0D6 /* DailyViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16D826D916BD0086D0D6 /* DailyViewSection.swift */; };
 		F1BC16DC26D917FE0086D0D6 /* WeeklyViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC16DB26D917FE0086D0D6 /* WeeklyViewSection.swift */; };
@@ -40,6 +41,7 @@
 		F1413F4926D85AA60054B080 /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
 		F1413F4C26D862A10054B080 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
 		F14E058426DA56690017CC15 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		F14E058826DAC2B80017CC15 /* MoreInfoViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewSection.swift; sourceTree = "<group>"; };
 		F1BC16D026D90BD20086D0D6 /* MoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
 		F1BC16D826D916BD0086D0D6 /* DailyViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewSection.swift; sourceTree = "<group>"; };
 		F1BC16DB26D917FE0086D0D6 /* WeeklyViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewSection.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				F1BC16DB26D917FE0086D0D6 /* WeeklyViewSection.swift */,
 				F11D860926D9A1A500BCB464 /* LoadingView.swift */,
 				F14E058426DA56690017CC15 /* BackgroundView.swift */,
+				F14E058826DAC2B80017CC15 /* MoreInfoViewSection.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				F14E058526DA56690017CC15 /* BackgroundView.swift in Sources */,
 				F1413F4A26D85AA60054B080 /* DailyView.swift in Sources */,
 				F1BC16D126D90BD20086D0D6 /* MoreInfoView.swift in Sources */,
+				F14E058926DAC2B90017CC15 /* MoreInfoViewSection.swift in Sources */,
 				F1413F3726D858DB0054B080 /* ContentView.swift in Sources */,
 				F10BD8AE26DA1DFD00E3A370 /* Date.swift in Sources */,
 				F1413F4D26D862A10054B080 /* WeeklyView.swift in Sources */,

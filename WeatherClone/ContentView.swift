@@ -23,10 +23,14 @@ struct ContentView: View {
                     .padding(.top, -1)
                     .padding(.bottom, -1)
                 DividerView()
-                WeeklyViewSection(data: data!)
-                    .padding(.top, 5)
-                    .padding(.leading, 5)
-                    .padding(.trailing, 5)
+                ScrollView {
+                    WeeklyViewSection(data: data!)
+                        .padding(.top, 5)
+                        .padding(.leading, 5)
+                        .padding(.trailing, 5)
+                    MoreInfoViewSection(sunrise: data!.current.sunrise, sunset: data!.current.sunset, humidity: data!.current.humidity, pressure: data!.current.pressure, feelsLike: Int(data!.current.feels_like), windSpeed: data!.current.wind_speed, visibility: data!.current.visibility, uvi: data!.current.uvi)                   
+                }
+                
             }
             LoadingView(isAnimating: isAnimating)
                 .visibility(hidden: !isAnimating)

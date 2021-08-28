@@ -17,24 +17,28 @@ struct MoreInfoView: View {
                 VStack(alignment: .leading) {
                     Text(title1.0.uppercased())
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 3)
                     Text(title1.1)
                         .font(.title2)
                 }
+                
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 25, alignment: .leading)
                 Spacer()
                 VStack(alignment: .leading) {
                     Text(title2.0.uppercased())
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 3)
                     Text(title2.1)
                         .font(.title2)
                 }
+                .padding(.all, 2)
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 24, alignment: .leading)
                 Spacer()
-                
             }
-            .padding()                
+            .padding()
         }
-             
     }
 }
 

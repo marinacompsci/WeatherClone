@@ -23,4 +23,9 @@ extension String {
     func separateHourFromTime() -> String {
         return String(self.split(separator: ":")[0])
     }
+    
+    func separetSecondsFromTime() -> String {
+        let split = self.split(separator: ":")
+        return "\(split[0]):\(split[1])"
+    }
 }
