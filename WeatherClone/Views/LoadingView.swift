@@ -31,11 +31,12 @@ struct VisibilityStyle: ViewModifier {
     
     @ViewBuilder
     func body(content: Content) -> some View {
-        if hidden {
+        content.opacity(hidden ? 0 : 1)
+        /*if hidden {
             content.hidden()
         } else {
             content
-        }
+        }*/
    }
 }
 
